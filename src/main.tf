@@ -1,10 +1,9 @@
-//https://www.terraform.io/docs/providers/azurerm/r/container_registry.html
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry
 resource "azurerm_container_registry" "this" {
   name                = var.acr_name
   resource_group_name = var.resource_group_name
   location            = var.location
-  sku                 = "Basic"
+  sku                 = var.sku
   admin_enabled       = var.admin_enabled
-  //georeplication_locations = ["East US", "West Europe"]
-  tags = var.tags
+  tags                = var.tags
 }
