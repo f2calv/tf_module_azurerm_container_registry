@@ -1,4 +1,4 @@
-# Terraform Module: Azure Container Registry
+# Terraform Module for Azure Container Registry
 
 Provisions an [Azure Container Registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry).
 
@@ -6,7 +6,7 @@ Provisions an [Azure Container Registry](https://registry.terraform.io/providers
 
 ```hcl
 module "acr" {
-  source              = "git::https://github.com/f2calv/tf_module_azurerm_container_registry.git//src?ref=main"
+  source              = "git::https://github.com/f2calv/tf_module_azurerm_container_registry.git//src?ref=v0.2.0"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   acr_name            = "myregistry"
@@ -18,9 +18,9 @@ module "acr" {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `resource_group_name` | `string` | — | Name of the resource group |
+| `resource_group_name` | `string` | Required | Name of the resource group |
 | `location` | `string` | `West Europe` | Location of the parent resource group |
-| `acr_name` | `string` | — | Name of the Azure Container Registry |
+| `acr_name` | `string` | Required | Name of the Azure Container Registry |
 | `sku` | `string` | `Basic` | SKU tier for the registry (Basic, Standard, Premium) |
 | `admin_enabled` | `bool` | `false` | Is admin access to the registry enabled? |
 | `tags` | `map(string)` | `{}` | Any tags that should be present on the resources |
