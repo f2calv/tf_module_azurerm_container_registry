@@ -1,7 +1,4 @@
----
-title: Terraform Module for Azure Container Registry
-description: Provision an Azure Container Registry with configurable SKU and admin access
----
+# Terraform Module for Azure Container Registry
 
 Provisions an [Azure Container Registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry).
 
